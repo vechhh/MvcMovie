@@ -13,9 +13,15 @@ namespace MvcMovie.Controllers
             _logger = logger;
         }
 
+        [HttpPost]
+       
         public IActionResult Index()
         {
             return View();
+        }
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         public IActionResult Privacy()
